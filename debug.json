@@ -1,0 +1,28 @@
+{
+  "startedAt": "2025-08-09T10:10:23.105Z",
+  "params": {
+    "DIST": [
+      "1144000000"
+    ],
+    "TYPES": [
+      "OR"
+    ],
+    "TRADE": [
+      "B2"
+    ],
+    "MAX_PAGES": 12
+  },
+  "combos": [
+    {
+      "code": "1144000000",
+      "tp": "OR",
+      "tr": "B2",
+      "page": 1,
+      "status": 401,
+      "items": 0
+    }
+  ],
+  "scannedIds": 0,
+  "matched": 0,
+  "notes": []
+}
