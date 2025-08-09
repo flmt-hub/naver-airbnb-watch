@@ -46,4 +46,10 @@ jobs:
           git add results.csv debug.json
           git commit -m "update results" || echo "no changes"
           git push
-      - name: Upload artifact
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: naver-airbnb-output
+          path: |
+            results.csv
+            debug.json
