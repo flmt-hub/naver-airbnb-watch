@@ -1,7 +1,7 @@
 // 최종 안전판: m.land 클러스터(JSON/HTML) → 실패 시 Playwright로 재시도 → 일별 스냅샷 저장
 const fs = require('fs');
 const path = require('path');
-const { chromium } = require('playwright'); // DOM/동일 컨텍스트 재시도용
+const { chromium } = require('playwright'); // 브라우저 컨텍스트 재시도용
 
 // ===== 입력(워크플로 inputs/ENV로 덮어쓰기 가능) =====
 const DIST = (process.env.DIST_CODES || '1144000000')  // 마포구
@@ -148,54 +148,65 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
 
   const out = [];
   let saved = 0;
-  for(const tile of tiles){
-    // 페이지 컨텍스트에서 fetch → 응답 HTML/JSON 그대로 받음
-    const groups = await page.evaluate(async (tile, rlet, trad, z, lat, lon) => {
+
+  for (const tile of tiles) {
+    // ★ 인자를 객체 1개로 전달
+    const groups = await page.evaluate(async (args) => {
+      const { tile, rlet, trad, z, lat, lon } = args;
       const params = new URLSearchParams({
-        view:'atcl', cortarNo:'', rletTpCd:rlet, tradTpCd:trad,
-        z:String(z), lat:String(lat), lon:String(lon),
-        btm:tile.btm, lft:tile.lft, top:tile.top, rgt:tile.rgt
+        view: 'atcl',
+        cortarNo: '',
+        rletTpCd: rlet,
+        tradTpCd: trad,
+        z: String(z), lat: String(lat), lon: String(lon),
+        btm: tile.btm, lft: tile.lft, top: tile.top, rgt: tile.rgt
       });
-      const r = await fetch('https://m.land.naver.com/cluster/clusterList?'+params.toString(), { credentials:'include' });
-      if(!r.ok) return [];
-      const j = await r.json().catch(()=>null);
+      const r = await fetch('https://m.land.naver.com/cluster/clusterList?' + params.toString(), { credentials: 'include' });
+      if (!r.ok) return [];
+      const j = await r.json().catch(() => null);
       return j && j.data && j.data.ARTICLE ? j.data.ARTICLE : [];
-    }, tile, rlet, trad, z, lat, lon);
+    }, { tile, rlet, trad, z, lat, lon });
 
-    for(const g of groups){
-      const lgeo = String(g.lgeo), count = Number(g.count||0);
-      const pages = Math.min(Math.ceil(count/20), MAX_PAGES);
-      for(let p=1; p<=pages; p++){
-        const raw = await page.evaluate(async (lgeo, z, lat, lon, count, tile, rlet, trad) => {
+    for (const g of groups) {
+      const lgeo = String(g.lgeo), count = Number(g.count || 0);
+      const pages = Math.min(Math.ceil(count / 20), MAX_PAGES);
+
+      for (let pageIndex = 1; pageIndex <= pages; pageIndex++) {
+        // ★ 인자를 객체 1개로 전달 + pageIndex 반영 (기존 1 고정 버그 수정)
+        const raw = await page.evaluate(async (args) => {
+          const { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex } = args;
           const q = new URLSearchParams({
-            itemId:lgeo, mapKey:'', lgeo, showR0:'',
-            rletTpCd:rlet, tradTpCd:trad,
-            z:String(z), lat:String(lat), lon:String(lon),
-            totCnt:String(count), cortarNo:'', page:String(1),
-            btm:tile.btm, lft:tile.lft, top:tile.top, rgt:tile.rgt
+            itemId: lgeo, mapKey: '', lgeo, showR0: '',
+            rletTpCd: rlet, tradTpCd: trad,
+            z: String(z), lat: String(lat), lon: String(lon),
+            totCnt: String(count), cortarNo: '', page: String(pageIndex),
+            btm: tile.btm, lft: tile.lft, top: tile.top, rgt: tile.rgt
           });
-          const r = await fetch('https://m.land.naver.com/cluster/ajax/articleList?'+q.toString(), { credentials:'include' });
-          const t = await r.text();
-          return t;
-        }, lgeo, z, lat, lon, count, tile, rlet, trad);
+          const r = await fetch('https://m.land.naver.com/cluster/ajax/articleList?' + q.toString(), { credentials: 'include' });
+          return await r.text();
+        }, { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex });
 
-        // 샘플 저장
+        // 샘플 저장 (처음 몇 페이지만)
         if (saved < sampleLimit) {
-          fs.mkdirSync('samples', {recursive:true});
-          fs.writeFileSync(path.join('samples', `articleList_browser_${lgeo}_${p}.txt`), raw, 'utf8');
+          fs.mkdirSync('samples', { recursive: true });
+          fs.writeFileSync(path.join('samples', `articleList_browser_${lgeo}_${pageIndex}.txt`), raw, 'utf8');
           saved++;
         }
 
-        const tryJson = (()=>{ try { return JSON.parse(raw); } catch { return null; } })();
-        const list = parseArticleList(tryJson ?? raw);
-        for(const it of list){
+        // 파싱
+        let parsed;
+        try { parsed = parseArticleList(JSON.parse(raw)); }
+        catch { parsed = parseArticleList(raw); }
+
+        for (const it of parsed) {
           const id = String(it.atclNo || it.articleNo || '');
-          if(id) out.push({ id });
+          if (id) out.push({ id });
         }
         await page.waitForTimeout(200);
       }
     }
   }
+
   await browser.close();
   return out;
 }
