@@ -31,7 +31,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
       - name: Run crawler
         env:
           DIST_CODES: ${{ inputs.dist_codes }}
@@ -46,10 +46,4 @@ jobs:
           git add results.csv debug.json
           git commit -m "update results" || echo "no changes"
           git push
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: naver-airbnb-output
-          path: |
-            results.csv
-            debug.json
+      - name: Upload artifact
