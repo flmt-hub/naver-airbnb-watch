@@ -1,0 +1,11 @@
+{
+  "name": "naver-airbnb-watch",
+  "private": true,
+  "scripts": {
+    "start": "node crawler.js",
+    "postinstall": "npx playwright install --with-deps chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0"
+  }
+}
