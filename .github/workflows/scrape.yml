@@ -5,32 +5,30 @@ on:
   workflow_dispatch:
     inputs:
       dist_codes:
-        description: "법정동코드 리스트 (콤마 구분)"
+        description: "법정동코드 리스트 (콤마)"
         required: false
-        default: "1144000000"
+        default: "1144000000"      # 마포구
       types:
-        description: "유형 리스트 (콤마): APT,OPST,VL,OR,DDDGG"
+        description: "유형 리스트 (콤마)"
         required: false
-        default: "APT,OPST,VL"
+        default: "OR"               # 원룸
       trade:
-        description: "거래유형 (콤마): B2(월세),B1(전세),B3(단기)"
+        description: "거래유형 (콤마)"
         required: false
-        default: "B2"
+        default: "B2"               # 월세
       max_pages:
         description: "조합당 최대 페이지"
         required: false
-        default: "8"
+        default: "40"
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    permissions: { contents: write }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+        with: { node-version: "20" }
       - run: npm install --no-audit --no-fund
       - name: Run crawler
         env:
@@ -43,13 +41,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add results.csv debug.json
-          git commit -m "update results" || echo "no changes"
+          git add current.csv new_today.csv debug.json seen_ids.json snapshot_*.csv
+          git commit -m "daily update" || echo "no changes"
           git push
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: naver-airbnb-output
+          name: naver-airbnb-mapogu-or-b2
           path: |
-            results.csv
+            current.csv
+            new_today.csv
             debug.json
+            snapshot_*.csv
