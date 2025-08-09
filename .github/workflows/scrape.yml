@@ -1,0 +1,55 @@
+name: scrape
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 매일 09:00 KST (UTC 00:00)
+  workflow_dispatch:
+    inputs:
+      dist_codes:
+        description: "법정동코드 리스트 (콤마 구분)"
+        required: false
+        default: "1144000000"
+      types:
+        description: "유형 리스트 (콤마): APT,OPST,VL,OR,DDDGG"
+        required: false
+        default: "APT,OPST,VL"
+      trade:
+        description: "거래유형 (콤마): B2(월세),B1(전세),B3(단기)"
+        required: false
+        default: "B2"
+      max_pages:
+        description: "조합당 최대 페이지"
+        required: false
+        default: "8"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci
+      - name: Run crawler
+        env:
+          DIST_CODES: ${{ inputs.dist_codes }}
+          TYPES: ${{ inputs.types }}
+          TRADE: ${{ inputs.trade }}
+          MAX_PAGES: ${{ inputs.max_pages }}
+        run: npm start
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add results.csv debug.json
+          git commit -m "update results" || echo "no changes"
+          git push
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: naver-airbnb-output
+          path: |
+            results.csv
+            debug.json
