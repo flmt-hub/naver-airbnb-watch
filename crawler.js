@@ -1,4 +1,4 @@
-// 모바일 엔드포인트(쿠키 불필요) 기반: 마포구 OR(원룸) B2(월세) 전수 + 매일 스냅샷
+// m.land 모바일 엔드포인트 기반: 마포 OR(원룸) B2(월세) 전수 + 일별 스냅샷
 const fs = require('fs');
 
 // ===== 입력(워크플로 inputs/ENV로 덮어쓰기 가능) =====
@@ -9,14 +9,6 @@ const TYPES = (process.env.TYPES || 'OR')              // 원룸
 const TRADE = (process.env.TRADE || 'B2')              // 월세
   .split(',').map(s => s.trim()).filter(Boolean);
 const MAX_PAGES = parseInt(process.env.MAX_PAGES || '40', 10);
-
-// 코드→키워드(검색어) 매핑: 필요시 추가
-const CODE_TO_KEYWORD = {
-  '1144000000': '마포구',
-  '1168000000': '강남구',
-  '1165000000': '서초구',
-  // ...원하면 여기에 더 추가
-};
 
 const H = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
@@ -31,6 +23,7 @@ function toCSV(arr){
   const lines=[cols.join(',')].concat(arr.map(o=>cols.map(c=>`"${esc(o[c])}"`).join(',')));
   return lines.join('\n');
 }
+const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 
 // 1) m.land 검색 결과에서 filter 블록 파싱(lat/lon/z/cortarNo)
 async function getFilterByKeyword(keyword){
@@ -39,12 +32,8 @@ async function getFilterByKeyword(keyword){
   const m = html.match(/filter:\s*\{([\s\S]*?)\}/);
   if(!m) throw new Error('filter block not found');
   const raw = m[1].replace(/[\s'"]/g,'');
-  const grab = (k) => {
-    const mm = raw.match(new RegExp(`${k}:([^,}]+)`));
-    return mm ? mm[1] : '';
-  };
+  const grab = (k) => { const mm = raw.match(new RegExp(`${k}:([^,}]+)`)); return mm ? mm[1] : ''; };
   const lat = grab('lat'), lon = grab('lon'), z = grab('z') || '12', cortarNo = grab('cortarNo');
-  // 여유 margin(블로그 예제 값)
   const lat_margin = 0.118, lon_margin = 0.111;
   const btm = (parseFloat(lat)-lat_margin).toFixed(6);
   const lft = (parseFloat(lon)-lon_margin).toFixed(6);
@@ -53,7 +42,7 @@ async function getFilterByKeyword(keyword){
   return { lat, lon, z, cortarNo, btm, lft, top, rgt };
 }
 
-// 2) clusterList → 원형 그룹들
+// 2) clusterList → 그룹
 async function fetchClusterList(params, rletTpCd, tradTpCd){
   const u = new URL('https://m.land.naver.com/cluster/clusterList');
   u.searchParams.set('view','atcl');
@@ -73,8 +62,8 @@ async function fetchClusterList(params, rletTpCd, tradTpCd){
   return (j && j.data && j.data.ARTICLE) ? j.data.ARTICLE : [];
 }
 
-// 3) 각 그룹의 articleList(20개씩 페이징)
-async function fetchArticleList(lgeo, z, lat, lon, count, cortarNo, rletTpCd, tradTpCd, page){
+// 3) 각 그룹의 articleList (JSON 또는 HTML 모두 대응)
+async function fetchArticleListRaw(lgeo, z, lat, lon, count, cortarNo, rletTpCd, tradTpCd, page){
   const u = new URL('https://m.land.naver.com/cluster/ajax/articleList');
   u.searchParams.set('itemId', lgeo);
   u.searchParams.set('mapKey','');
@@ -90,28 +79,64 @@ async function fetchArticleList(lgeo, z, lat, lon, count, cortarNo, rletTpCd, tr
   u.searchParams.set('page', String(page));
   const r = await fetch(u, { headers: H });
   if(!r.ok) throw new Error(`articleList ${r.status}`);
-  return await r.json(); // 배열 형태
+  const txt = await r.text();
+  // JSON이면 파싱 시도
+  try {
+    const j = JSON.parse(txt);
+    return j;
+  } catch { /* HTML 케이스 */ }
+  return txt; // HTML 문자열
 }
+
+function parseArticleListToItems(payload){
+  // 1) JSON 배열/객체
+  if (Array.isArray(payload)) return payload;
+  if (payload && typeof payload === 'object') {
+    if (Array.isArray(payload.list)) return payload.list;
+    if (Array.isArray(payload.articles)) return payload.articles;
+  }
+  // 2) HTML 문자열 → 정규식으로 ID 및 일부 필드 뽑기
+  if (typeof payload === 'string') {
+    const html = payload;
+    const items = [];
+    // atclNo 추출
+    const reId = /(?:data-article-no|data-atcl-no|\/article\/info\/)(\d{7,})/g;
+    const seen = new Set();
+    let m;
+    while ((m = reId.exec(html)) !== null) {
+      const id = m[1];
+      if (seen.has(id)) continue;
+      seen.add(id);
+      items.push({ atclNo: id });
+    }
+    // (옵션) 요약 필드 추출 시도
+    // 보증금/월세 숫자 조각
+    const rePrice = /(\d[\d,]*)\s*\/\s*(\d[\d,]*)/;
+    // 면적, 층 등은 페이지 구조 변화가 잦아 일단 생략(상세에서 보강 가능)
+    return items;
+  }
+  return [];
+}
+
+function pick(...vals){ for(const v of vals){ if(v!==undefined && v!==null && v!=='') return v; } return ''; }
 
 async function main(){
   const startedAt = new Date().toISOString();
-  const debug = { startedAt, mode: 'mobile-cluster', params:{DIST,TYPES,TRADE,MAX_PAGES}, combos:[], groups:0, scannedIds:0, notes:[] };
+  const debug = { startedAt, mode:'mobile-cluster', params:{DIST,TYPES,TRADE,MAX_PAGES}, combos:[], groups:0, scannedIds:0, notes:[], pushedByPage:[] };
 
   const seen = new Set(fs.existsSync('seen_ids.json') ? JSON.parse(fs.readFileSync('seen_ids.json','utf8')).map(String) : []);
   const rows = [];
   const byId = new Map();
 
   for(const code of DIST){
-    const keyword = CODE_TO_KEYWORD[code] || '마포구'; // 기본값
-    const f = await getFilterByKeyword(keyword); // lat/lon/z/cortarNo 계산
-    if(!f.cortarNo || f.cortarNo !== code){
-      // 코드와 검색어 매칭이 다르면 code 우선으로 사용
-      f.cortarNo = code;
-    }
+    // 검색 키워드: 코드명 대신 구 이름을 그대로 쓰는 편이 안정적
+    const keyword = '마포구';
+    const f = await getFilterByKeyword(keyword);
+    // 안전하게 cortarNo를 code로 고정
+    f.cortarNo = code;
 
     for(const rlet of TYPES){
       for(const trad of TRADE){
-        // 1) 그룹 목록
         const groups = await fetchClusterList(f, rlet, trad);
         debug.groups += groups.length;
 
@@ -119,34 +144,39 @@ async function main(){
           const lgeo = String(g.lgeo), count = Number(g.count||0), z2 = g.z || f.z, lat2 = g.lat || f.lat, lon2 = g.lon || f.lon;
           const pages = Math.min(Math.ceil(count/20), MAX_PAGES);
           for(let idx=1; idx<=pages; idx++){
-            debug.combos.push({ code, rlet, trad, lgeo, page: idx, groupCount: count });
-            const list = await fetchArticleList(lgeo, z2, lat2, lon2, count, f.cortarNo, rlet, trad, idx);
-            for(const it of (Array.isArray(list)? list : [])){
+            const raw = await fetchArticleListRaw(lgeo, z2, lat2, lon2, count, f.cortarNo, rlet, trad, idx);
+            const list = parseArticleListToItems(raw);
+            debug.combos.push({ code, rlet, trad, lgeo, page: idx, groupCount: count, parsed: Array.isArray(list)? list.length : 0 });
+            let pushed = 0;
+            for(const it of list){
               const id = String(it.atclNo || it.articleNo || '');
               if(!id || byId.has(id)) continue;
               byId.set(id, it);
+              pushed++;
             }
+            debug.pushedByPage.push({ lgeo, page: idx, pushed });
+            await sleep(250);
           }
         }
       }
     }
   }
 
+  // 행 구성 (목록에 필드가 없으면 빈 값, 링크는 모두 제공)
   const d = todayStr();
-  // 매물 행 만들기 (목록 JSON 기반)
   for(const [id, it] of byId.entries()){
     rows.push({
       date: d,
       articleNo: id,
-      title: it.atclNm || it.articleName || it.cmplxNm || '',
-      type: it.rletTpNm || '',
-      deposit: it.hanPrc || '',
-      rent: it.rentPrc || '',
-      area_m2: it.spc2 || it.area2 || it.spc1 || it.area1 || '',
-      floor: it.flrInfo || it.floor || '',
-      address: it.ldongNm || it.ctpvNm || it.bldrNm || '',
-      realtor: it.rltrNm || '',
-      postedYmd: it.registYmd || '',
+      title: pick(it.atclNm, it.articleName, it.cmplxNm, ''),
+      type: pick(it.rletTpNm, ''),
+      deposit: pick(it.hanPrc, ''),
+      rent: pick(it.rentPrc, ''),
+      area_m2: pick(it.spc2, it.area2, it.spc1, it.area1, ''),
+      floor: pick(it.flrInfo, it.floor, ''),
+      address: pick(it.ldongNm, it.ctpvNm, it.bldrNm, ''),
+      realtor: pick(it.rltrNm, ''),
+      postedYmd: pick(it.registYmd, ''),
       updatedYmd: '',
       link: `https://m.land.naver.com/article/info/${id}`
     });
