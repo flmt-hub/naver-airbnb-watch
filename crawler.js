@@ -13,7 +13,9 @@ const MAX_PAGES = parseInt(process.env.MAX_PAGES || '40', 10);
 const H = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
   'Accept-Language': 'ko-KR,ko;q=0.9',
-  'Accept': 'text/html,application/json;q=0.9,*/*;q=0.8'
+  'Accept': 'text/html,application/json;q=0.9,*/*;q=0.8',
+  'Referer': 'https://m.land.naver.com/',
+  'X-Requested-With': 'XMLHttpRequest'
 };
 
 function esc(s){ return String(s==null?'':s).replace(/"/g,'""'); }
@@ -62,7 +64,7 @@ async function fetchClusterList(params, rletTpCd, tradTpCd){
   return (j && j.data && j.data.ARTICLE) ? j.data.ARTICLE : [];
 }
 
-// 3) 각 그룹의 articleList (JSON 또는 HTML 모두 대응)
+// 3) 각 그룹의 articleList (JSON 또는 HTML·JSON내 HTML 모두 대응)
 async function fetchArticleListRaw(lgeo, z, lat, lon, count, cortarNo, rletTpCd, tradTpCd, page){
   const u = new URL('https://m.land.naver.com/cluster/ajax/articleList');
   u.searchParams.set('itemId', lgeo);
@@ -80,12 +82,7 @@ async function fetchArticleListRaw(lgeo, z, lat, lon, count, cortarNo, rletTpCd,
   const r = await fetch(u, { headers: H });
   if(!r.ok) throw new Error(`articleList ${r.status}`);
   const txt = await r.text();
-  // JSON이면 파싱 시도
-  try {
-    const j = JSON.parse(txt);
-    return j;
-  } catch { /* HTML 케이스 */ }
-  return txt; // HTML 문자열
+  try { return JSON.parse(txt); } catch { return txt; } // JSON or HTML string
 }
 
 function parseArticleListToItems(payload){
@@ -94,28 +91,28 @@ function parseArticleListToItems(payload){
   if (payload && typeof payload === 'object') {
     if (Array.isArray(payload.list)) return payload.list;
     if (Array.isArray(payload.articles)) return payload.articles;
+    // 새 포맷: JSON 내에 HTML 조각
+    const html = payload.html || payload.body || payload.result || payload.listHtml || payload.renderedList;
+    if (typeof html === 'string') return parseIdsFromHtml(html);
   }
-  // 2) HTML 문자열 → 정규식으로 ID 및 일부 필드 뽑기
-  if (typeof payload === 'string') {
-    const html = payload;
-    const items = [];
-    // atclNo 추출
-    const reId = /(?:data-article-no|data-atcl-no|\/article\/info\/)(\d{7,})/g;
-    const seen = new Set();
-    let m;
-    while ((m = reId.exec(html)) !== null) {
-      const id = m[1];
-      if (seen.has(id)) continue;
-      seen.add(id);
-      items.push({ atclNo: id });
-    }
-    // (옵션) 요약 필드 추출 시도
-    // 보증금/월세 숫자 조각
-    const rePrice = /(\d[\d,]*)\s*\/\s*(\d[\d,]*)/;
-    // 면적, 층 등은 페이지 구조 변화가 잦아 일단 생략(상세에서 보강 가능)
-    return items;
-  }
+  // 2) HTML 문자열
+  if (typeof payload === 'string') return parseIdsFromHtml(payload);
   return [];
+}
+
+function parseIdsFromHtml(html){
+  const items = [];
+  const seen = new Set();
+  // 다양한 위치에서 ID를 캐치
+  const reId = /(?:data-(?:article|atcl)-no=["']?|\/article\/info\/)(\d{7,})/g;
+  let m;
+  while ((m = reId.exec(html)) !== null) {
+    const id = m[1];
+    if (seen.has(id)) continue;
+    seen.add(id);
+    items.push({ atclNo: id });
+  }
+  return items;
 }
 
 function pick(...vals){ for(const v of vals){ if(v!==undefined && v!==null && v!=='') return v; } return ''; }
@@ -129,11 +126,9 @@ async function main(){
   const byId = new Map();
 
   for(const code of DIST){
-    // 검색 키워드: 코드명 대신 구 이름을 그대로 쓰는 편이 안정적
-    const keyword = '마포구';
+    const keyword = '마포구'; // 코드→키워드 매핑 대신 안전하게 구명 고정
     const f = await getFilterByKeyword(keyword);
-    // 안전하게 cortarNo를 code로 고정
-    f.cortarNo = code;
+    f.cortarNo = code; // 코드 우선
 
     for(const rlet of TYPES){
       for(const trad of TRADE){
@@ -146,7 +141,7 @@ async function main(){
           for(let idx=1; idx<=pages; idx++){
             const raw = await fetchArticleListRaw(lgeo, z2, lat2, lon2, count, f.cortarNo, rlet, trad, idx);
             const list = parseArticleListToItems(raw);
-            debug.combos.push({ code, rlet, trad, lgeo, page: idx, groupCount: count, parsed: Array.isArray(list)? list.length : 0 });
+            debug.combos.push({ code, rlet, trad, lgeo, page: idx, groupCount: count, parsed: Array.isArray(list)? list.length : 0, rawType: (typeof raw) });
             let pushed = 0;
             for(const it of list){
               const id = String(it.atclNo || it.articleNo || '');
