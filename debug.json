@@ -1,5 +1,5 @@
 {
-  "startedAt": "2025-08-09T11:34:18.423Z",
+  "startedAt": "2025-08-09T12:03:56.977Z",
   "mode": "mobile-cluster",
   "params": {
     "DIST": [
@@ -20,7 +20,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 1,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -28,7 +29,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 2,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -36,7 +38,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 3,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -44,7 +47,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 4,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -52,7 +56,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 5,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -60,7 +65,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 6,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -68,7 +74,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 7,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -76,7 +83,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 8,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -84,7 +92,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 9,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -92,7 +101,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 10,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -100,7 +110,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 11,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -108,7 +119,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 12,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -116,7 +128,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 13,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -124,7 +137,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 14,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -132,7 +146,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 15,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -140,7 +155,8 @@
       "trad": "B2",
       "lgeo": "212210032",
       "page": 16,
-      "groupCount": 312
+      "groupCount": 312,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -148,7 +164,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 1,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -156,7 +173,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 2,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -164,7 +182,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 3,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -172,7 +191,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 4,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -180,7 +200,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 5,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -188,7 +209,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 6,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -196,7 +218,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 7,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -204,7 +227,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 8,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -212,7 +236,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 9,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -220,7 +245,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 10,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -228,7 +254,8 @@
       "trad": "B2",
       "lgeo": "212210023",
       "page": 11,
-      "groupCount": 208
+      "groupCount": 208,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -236,7 +263,8 @@
       "trad": "B2",
       "lgeo": "212210033",
       "page": 1,
-      "groupCount": 104
+      "groupCount": 104,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -244,7 +272,8 @@
       "trad": "B2",
       "lgeo": "212210033",
       "page": 2,
-      "groupCount": 104
+      "groupCount": 104,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -252,7 +281,8 @@
       "trad": "B2",
       "lgeo": "212210033",
       "page": 3,
-      "groupCount": 104
+      "groupCount": 104,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -260,7 +290,8 @@
       "trad": "B2",
       "lgeo": "212210033",
       "page": 4,
-      "groupCount": 104
+      "groupCount": 104,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -268,7 +299,8 @@
       "trad": "B2",
       "lgeo": "212210033",
       "page": 5,
-      "groupCount": 104
+      "groupCount": 104,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -276,7 +308,8 @@
       "trad": "B2",
       "lgeo": "212210033",
       "page": 6,
-      "groupCount": 104
+      "groupCount": 104,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -284,7 +317,8 @@
       "trad": "B2",
       "lgeo": "212210022",
       "page": 1,
-      "groupCount": 53
+      "groupCount": 53,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -292,7 +326,8 @@
       "trad": "B2",
       "lgeo": "212210022",
       "page": 2,
-      "groupCount": 53
+      "groupCount": 53,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -300,7 +335,8 @@
       "trad": "B2",
       "lgeo": "212210022",
       "page": 3,
-      "groupCount": 53
+      "groupCount": 53,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -308,7 +344,8 @@
       "trad": "B2",
       "lgeo": "212210200",
       "page": 1,
-      "groupCount": 40
+      "groupCount": 40,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -316,7 +353,8 @@
       "trad": "B2",
       "lgeo": "212210200",
       "page": 2,
-      "groupCount": 40
+      "groupCount": 40,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -324,7 +362,8 @@
       "trad": "B2",
       "lgeo": "212210201",
       "page": 1,
-      "groupCount": 40
+      "groupCount": 40,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -332,7 +371,8 @@
       "trad": "B2",
       "lgeo": "212210201",
       "page": 2,
-      "groupCount": 40
+      "groupCount": 40,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -340,7 +380,8 @@
       "trad": "B2",
       "lgeo": "212210030",
       "page": 1,
-      "groupCount": 34
+      "groupCount": 34,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -348,7 +389,8 @@
       "trad": "B2",
       "lgeo": "212210030",
       "page": 2,
-      "groupCount": 34
+      "groupCount": 34,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -356,7 +398,8 @@
       "trad": "B2",
       "lgeo": "212210031",
       "page": 1,
-      "groupCount": 25
+      "groupCount": 25,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -364,7 +407,8 @@
       "trad": "B2",
       "lgeo": "212210031",
       "page": 2,
-      "groupCount": 25
+      "groupCount": 25,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -372,7 +416,8 @@
       "trad": "B2",
       "lgeo": "212210021",
       "page": 1,
-      "groupCount": 7
+      "groupCount": 7,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -380,7 +425,8 @@
       "trad": "B2",
       "lgeo": "212210210",
       "page": 1,
-      "groupCount": 7
+      "groupCount": 7,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -388,7 +434,8 @@
       "trad": "B2",
       "lgeo": "212210122",
       "page": 1,
-      "groupCount": 4
+      "groupCount": 4,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -396,10 +443,253 @@
       "trad": "B2",
       "lgeo": "212201313",
       "page": 1,
-      "groupCount": 1
+      "groupCount": 1,
+      "parsed": 0
     }
   ],
   "groups": 12,
   "scannedIds": 0,
-  "notes": []
+  "notes": [],
+  "pushedByPage": [
+    {
+      "lgeo": "212210032",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 3,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 4,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 5,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 6,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 7,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 8,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 9,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 10,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 11,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 12,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 13,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 14,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 15,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210032",
+      "page": 16,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 3,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 4,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 5,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 6,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 7,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 8,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 9,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 10,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210023",
+      "page": 11,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210033",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210033",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210033",
+      "page": 3,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210033",
+      "page": 4,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210033",
+      "page": 5,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210033",
+      "page": 6,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210022",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210022",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210022",
+      "page": 3,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210200",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210200",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210201",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210201",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210030",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210030",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210031",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210031",
+      "page": 2,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210021",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210210",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212210122",
+      "page": 1,
+      "pushed": 0
+    },
+    {
+      "lgeo": "212201313",
+      "page": 1,
+      "pushed": 0
+    }
+  ]
 }
