@@ -1,6 +1,6 @@
 {
-  "startedAt": "2025-08-09T12:37:31.962Z",
-  "mode": "mobile-cluster+grid+browser-fallback",
+  "startedAt": "2025-08-10T01:53:08.391Z",
+  "mode": "mobile-cluster+grid+browser-fallback+mapKey",
   "params": {
     "DIST": [
       "1144000000"
@@ -109,8 +109,40 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212201103",
-      "page": 12,
+      "lgeo": "212023323",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 5,
       "parsed": 0
     },
     {
@@ -157,46 +189,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023323",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 4,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212201110",
       "page": 1,
       "parsed": 0
@@ -207,14 +199,6 @@
       "trad": "B2",
       "lgeo": "212201110",
       "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201110",
-      "page": 3,
       "parsed": 0
     },
     {
@@ -744,10 +728,1315 @@
       "lgeo": "212032231",
       "page": 8,
       "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 12,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 13,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 14,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 15,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 16,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 17,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 18,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 19,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 20,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 21,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 22,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 23,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 24,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 25,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 26,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 27,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 28,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 29,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 30,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 31,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 32,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 33,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 34,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 35,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 36,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 37,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 38,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 39,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032231",
+      "page": 40,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 12,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 13,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 14,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 15,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 16,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 17,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 18,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 19,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 20,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 21,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 22,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 23,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 24,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 25,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 26,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 27,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 28,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 29,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 30,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 31,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 32,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 33,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 34,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 35,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 36,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 37,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 38,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 39,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032232",
+      "page": 40,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 12,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 13,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 14,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 15,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 16,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 17,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 18,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 19,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 20,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 21,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 22,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 23,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 24,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 25,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 26,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 27,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 28,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 29,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 30,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 31,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 32,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 33,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 34,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 35,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 36,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 37,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 38,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 39,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 40,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210011",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210033",
+      "page": 12,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210221",
+      "page": 12,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210203",
+      "page": 7,
+      "parsed": 0
     }
   ],
   "pushed": 0,
   "notes": [
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1053,6 +2342,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1301,6 +2591,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1407,6 +2698,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1547,6 +2839,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1625,6 +2918,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1644,6 +2938,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
@@ -1682,197 +2977,7 @@
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
-    "articleList-fail:articleList 307",
+    "browser-fallback-used:0",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
     "articleList-fail:articleList 307",
