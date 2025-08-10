@@ -1,4 +1,5 @@
-// m.land 클러스터 + mapKey + 리다이렉트 follow + 모바일 UA → 실패 시 Playwright 폴백 → 스냅샷 저장
+// m.land 클러스터 + mapKey + 리다이렉트 follow + 모바일 UA
+// + 초강력 ID 파서(Any→IDs) + Playwright 폴백 → 스냅샷 저장
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -8,7 +9,7 @@ const DIST = (process.env.DIST_CODES || '1144000000').split(',').map(s=>s.trim()
 const TYPES = (process.env.TYPES || 'OR').split(',').map(s=>s.trim()).filter(Boolean);            // 원룸
 const TRADE = (process.env.TRADE || 'B2').split(',').map(s=>s.trim()).filter(Boolean);            // 월세
 const MAX_PAGES = parseInt(process.env.MAX_PAGES || '40', 10);
-const GRID = parseInt(process.env.GRID || '3', 10); // 지도 타일 분해(크면 더 잘 긁힘, 3~4 추천)
+const GRID = parseInt(process.env.GRID || '3', 10); // 지도 타일 분해(3~4 추천)
 
 const MOBILE_UA = 'Mozilla/5.0 (Linux; Android 12; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36';
 
@@ -35,25 +36,56 @@ function toCSV(arr){
 }
 const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 
-// ── 파서 ─────────────────────────────────────────────────────────────
-function parseIdsFromHtml(html){
-  const items = [];
-  const seen = new Set();
-  const reId = /(?:data-(?:article|atcl)-no=["']?|\/article\/info\/)(\d{7,})/g;
-  let m; while ((m = reId.exec(html)) !== null) { const id=m[1]; if(seen.has(id)) continue; seen.add(id); items.push({ atclNo:id }); }
-  return items;
+// ── 초강력 파서 (JSON/HTML/이스케이프 모두 커버) ───────────────────────
+function parseAnyToIds(payload) {
+  let s = '';
+  if (typeof payload === 'string') {
+    s = payload;
+  } else {
+    try { s = JSON.stringify(payload); } catch { s = ''; }
+  }
+  if (!s) return [];
+
+  const ids = new Set();
+
+  // data-속성 / 링크
+  const reAttrOrLink = /(?:data-(?:article|atcl)-no=["']?|\/article\/info\/)(\d{7,})/g;
+  let m;
+  while ((m = reAttrOrLink.exec(s)) !== null) ids.add(m[1]);
+
+  // JSON 키 패턴
+  const reJsonKey = /(?:"|')(?:atclNo|articleNo)(?:"|')\s*[:=]\s*(?:"|')?(\d{7,})/g;
+  while ((m = reJsonKey.exec(s)) !== null) ids.add(m[1]);
+
+  // 이스케이프된 링크
+  const reEscLink = /\\\/article\\\/info\\\/(\d{7,})/g;
+  while ((m = reEscLink.exec(s)) !== null) ids.add(m[1]);
+
+  return Array.from(ids).map(id => ({ atclNo: id }));
 }
-function parseArticleList(payload){
+
+function parseArticleList(payload) {
   if (Array.isArray(payload)) return payload;
+
   if (payload && typeof payload === 'object') {
     if (Array.isArray(payload.list)) return payload.list;
     if (Array.isArray(payload.articles)) return payload.articles;
-    const html = payload.html || payload.body || payload.result || payload.listHtml || payload.renderedList;
-    if (typeof html === 'string') return parseIdsFromHtml(html);
+    if (Array.isArray(payload.body)) return payload.body;
+    if (Array.isArray(payload.data)) return payload.data;
+
+    const html =
+      payload.html || payload.body || payload.result ||
+      payload.listHtml || payload.renderedList || payload.itemsHtml;
+    if (typeof html === 'string') return parseAnyToIds(html);
+
+    return parseAnyToIds(payload);
   }
-  if (typeof payload === 'string') return parseIdsFromHtml(payload);
+
+  if (typeof payload === 'string') return parseAnyToIds(payload);
+
   return [];
 }
+
 function pick(...vals){ for(const v of vals){ if(v!==undefined && v!==null && v!=='') return v; } return ''; }
 
 // ── 모바일 지도 파라미터 ────────────────────────────────────────────
@@ -135,10 +167,8 @@ async function fetchArticleListRaw(lgeo, mapKey, z, lat, lon, count, tile, rletT
   u.searchParams.set('top', tile.top);
   u.searchParams.set('rgt', tile.rgt);
 
-  // ★ 307 리다이렉트 따라가도록 설정
-  const r = await fetch(u, { headers: headers(lat,lon,z), redirect:'follow' });
-  const txt = await r.text();
-  return txt; // JSON 또는 HTML
+  const r = await fetch(u, { headers: headers(lat,lon,z), redirect:'follow' }); // 307 follow
+  return await r.text(); // JSON 또는 HTML
 }
 
 // ── Playwright 폴백(모바일 컨텍스트) ─────────────────────────────────
@@ -160,7 +190,6 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
   let saved = 0;
 
   for (const tile of tiles) {
-    // clusterList에서 mapKey도 같이 가져오기 (★ 인자 1개 객체로 전달)
     const { groups, mapKey } = await page.evaluate(async (args) => {
       const { tile, rlet, trad, z, lat, lon } = args;
       const params = new URLSearchParams({
@@ -183,7 +212,6 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
       const pages = Math.min(Math.ceil(count / 20), MAX_PAGES);
 
       for (let pageIndex = 1; pageIndex <= pages; pageIndex++) {
-        // ★ 인자 1개 객체 + pageIndex 반영
         const raw = await page.evaluate(async (args) => {
           const { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex, mapKey } = args;
           const q = new URLSearchParams({
@@ -206,6 +234,7 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
         let parsed;
         try { parsed = parseArticleList(JSON.parse(raw)); }
         catch { parsed = parseArticleList(raw); }
+
         for (const it of parsed) {
           const id = String(it.atclNo || it.articleNo || '');
           if (id) out.push({ id });
@@ -222,7 +251,7 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
 // ── 메인 ────────────────────────────────────────────────────────────
 async function main(){
   const startedAt = new Date().toISOString();
-  const debug = { startedAt, mode:'mobile-cluster+grid+browser-fallback+mapKey+redir', params:{DIST,TYPES,TRADE,MAX_PAGES,GRID}, tiles:0, groups:0, combos:[], pushed:0, notes:[] };
+  const debug = { startedAt, mode:'mobile-cluster+grid+browser-fallback+mapKey+redir+anyparser', params:{DIST,TYPES,TRADE,MAX_PAGES,GRID}, tiles:0, groups:0, combos:[], pushed:0, notes:[] };
 
   const seen = new Set(fs.existsSync('seen_ids.json') ? JSON.parse(fs.readFileSync('seen_ids.json','utf8')).map(String) : []);
   const rows = [];
@@ -280,7 +309,6 @@ async function main(){
             }
           }
 
-          // 안전망: 여전히 0이면 브라우저 컨텍스트로 재시도
           if (byId.size === 0) {
             const browserHits = await retryInBrowser(keyword, [tile], rlet, trad, f.z, f.lat, f.lon);
             for(const {id} of browserHits){ if(!byId.has(id)) byId.set(id, { atclNo: id }); }
