@@ -1,25 +1,28 @@
-// 최종 안전판: m.land 클러스터(JSON/HTML) → 실패 시 Playwright로 재시도 → 일별 스냅샷 저장
+// m.land 클러스터 → mapKey 연동 → 실패 시 Playwright 폴백 → CSV/스냅샷 저장
 const fs = require('fs');
 const path = require('path');
-const { chromium } = require('playwright'); // 브라우저 컨텍스트 재시도용
+const { chromium } = require('playwright');
 
 // ===== 입력(워크플로 inputs/ENV로 덮어쓰기 가능) =====
-const DIST = (process.env.DIST_CODES || '1144000000')  // 마포구
-  .split(',').map(s => s.trim()).filter(Boolean);
-const TYPES = (process.env.TYPES || 'OR')              // 원룸
-  .split(',').map(s => s.trim()).filter(Boolean);
-const TRADE = (process.env.TRADE || 'B2')              // 월세
-  .split(',').map(s => s.trim()).filter(Boolean);
+const DIST = (process.env.DIST_CODES || '1144000000').split(',').map(s=>s.trim()).filter(Boolean); // 마포구
+const TYPES = (process.env.TYPES || 'OR').split(',').map(s=>s.trim()).filter(Boolean);            // 원룸
+const TRADE = (process.env.TRADE || 'B2').split(',').map(s=>s.trim()).filter(Boolean);            // 월세
 const MAX_PAGES = parseInt(process.env.MAX_PAGES || '40', 10);
-const GRID = parseInt(process.env.GRID || '3', 10);    // 지도 타일 분해(3~4 추천)
+const GRID = parseInt(process.env.GRID || '3', 10); // 지도 타일 분해
 
-const H = {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
-  'Accept-Language': 'ko-KR,ko;q=0.9',
-  'Accept': 'text/html,application/json;q=0.9,*/*;q=0.8',
-  'Referer': 'https://m.land.naver.com/',
-  'X-Requested-With': 'XMLHttpRequest'
-};
+function headers(lat, lon, z) {
+  return {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
+    'Accept-Language': 'ko-KR,ko;q=0.9',
+    'Accept': 'application/json, text/plain, */*',
+    'Referer': `https://m.land.naver.com/map/${lat},${lon},${z}/`,
+    'Origin': 'https://m.land.naver.com',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Dest': 'empty'
+  };
+}
 
 function esc(s){ return String(s==null?'':s).replace(/"/g,'""'); }
 function todayStr(){ const d=new Date(); const y=d.getUTCFullYear(); const m=String(d.getUTCMonth()+1).padStart(2,'0'); const dd=String(d.getUTCDate()).padStart(2,'0'); return `${y}${m}${dd}`; }
@@ -30,23 +33,15 @@ function toCSV(arr){
 }
 const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 
-// ── 공통 파서 ─────────────────────────────────────────────────────────────
+// ── 파서 ─────────────────────────────────────────────────────────────
 function parseIdsFromHtml(html){
   const items = [];
   const seen = new Set();
   const reId = /(?:data-(?:article|atcl)-no=["']?|\/article\/info\/)(\d{7,})/g;
-  let m;
-  while ((m = reId.exec(html)) !== null) {
-    const id = m[1];
-    if (seen.has(id)) continue;
-    seen.add(id);
-    items.push({ atclNo: id });
-  }
+  let m; while ((m = reId.exec(html)) !== null) { const id=m[1]; if(seen.has(id)) continue; seen.add(id); items.push({ atclNo:id }); }
   return items;
 }
-
 function parseArticleList(payload){
-  // 1) JSON 배열/객체
   if (Array.isArray(payload)) return payload;
   if (payload && typeof payload === 'object') {
     if (Array.isArray(payload.list)) return payload.list;
@@ -54,16 +49,14 @@ function parseArticleList(payload){
     const html = payload.html || payload.body || payload.result || payload.listHtml || payload.renderedList;
     if (typeof html === 'string') return parseIdsFromHtml(html);
   }
-  // 2) HTML 문자열
   if (typeof payload === 'string') return parseIdsFromHtml(payload);
   return [];
 }
-
 function pick(...vals){ for(const v of vals){ if(v!==undefined && v!==null && v!=='') return v; } return ''; }
 
-// ── 모바일 지도 파라미터 ──────────────────────────────────────────────────
+// ── 모바일 지도 파라미터 ────────────────────────────────────────────
 async function getFilterByKeyword(keyword){
-  const r = await fetch(`https://m.land.naver.com/search/result/${encodeURIComponent(keyword)}`, { headers: H });
+  const r = await fetch(`https://m.land.naver.com/search/result/${encodeURIComponent(keyword)}`, { redirect:'follow', headers: headers(37.5665,126.9780,12) });
   const html = await r.text();
   const m = html.match(/filter:\s*\{([\s\S]*?)\}/);
   if(!m) throw new Error('filter block not found');
@@ -71,12 +64,12 @@ async function getFilterByKeyword(keyword){
   const grab = (k) => { const mm = raw.match(new RegExp(`${k}:([^,}]+)`)); return mm ? mm[1] : ''; };
   const lat = parseFloat(grab('lat')), lon = parseFloat(grab('lon')), z = grab('z') || '12', cortarNo = grab('cortarNo');
   const lat_margin = 0.118, lon_margin = 0.111;
-  return {
-    lat, lon, z, cortarNo,
+  return { lat, lon, z,
+    cortarNo,
     btm: (lat-lat_margin).toFixed(6),
     lft: (lon-lon_margin).toFixed(6),
     top: (lat+lat_margin).toFixed(6),
-    rgt: (lon+lon_margin).toFixed(6),
+    rgt: (lon+lon_margin).toFixed(6)
   };
 }
 
@@ -95,11 +88,11 @@ function splitGrid({btm,lft,top,rgt}, n){
   return tiles;
 }
 
-// ── 클러스터/리스트 호출 (fetch) ──────────────────────────────────────────
+// ── 클러스터/리스트 호출 ────────────────────────────────────────────
 async function fetchClusterList(tile, rletTpCd, tradTpCd, z, lat, lon){
   const u = new URL('https://m.land.naver.com/cluster/clusterList');
   u.searchParams.set('view','atcl');
-  u.searchParams.set('cortarNo',''); // tile 기반일 땐 비워도 동작
+  u.searchParams.set('cortarNo','');
   u.searchParams.set('rletTpCd', rletTpCd);
   u.searchParams.set('tradTpCd', tradTpCd);
   u.searchParams.set('z', z);
@@ -109,16 +102,20 @@ async function fetchClusterList(tile, rletTpCd, tradTpCd, z, lat, lon){
   u.searchParams.set('lft', tile.lft);
   u.searchParams.set('top', tile.top);
   u.searchParams.set('rgt', tile.rgt);
-  const r = await fetch(u, { headers: H });
+
+  const r = await fetch(u, { headers: headers(lat,lon,z), redirect:'follow' });
   if(!r.ok) throw new Error(`clusterList ${r.status}`);
   const j = await r.json();
-  return (j && j.data && j.data.ARTICLE) ? j.data.ARTICLE : [];
+  const data = j?.data || j?.result || j;
+  const groups = data?.ARTICLE || data?.article || [];
+  const mapKey = data?.mapKey || data?.MAP_KEY || j?.mapKey || '';
+  return { groups, mapKey };
 }
 
-async function fetchArticleListRaw(lgeo, z, lat, lon, count, tile, rletTpCd, tradTpCd, page){
+async function fetchArticleListRaw(lgeo, mapKey, z, lat, lon, count, tile, rletTpCd, tradTpCd, page){
   const u = new URL('https://m.land.naver.com/cluster/ajax/articleList');
   u.searchParams.set('itemId', lgeo);
-  u.searchParams.set('mapKey','');
+  u.searchParams.set('mapKey', mapKey || '');
   u.searchParams.set('lgeo', lgeo);
   u.searchParams.set('showR0','');
   u.searchParams.set('rletTpCd', rletTpCd);
@@ -127,19 +124,19 @@ async function fetchArticleListRaw(lgeo, z, lat, lon, count, tile, rletTpCd, tra
   u.searchParams.set('lat', lat);
   u.searchParams.set('lon', lon);
   u.searchParams.set('totCnt', count);
-  u.searchParams.set('cortarNo', ''); // tile 모드
+  u.searchParams.set('cortarNo', '');
   u.searchParams.set('page', String(page));
-  // 범위를 유지하려고 tile 정보도 같이 전달(백엔드가 쓰지 않아도 무해)
   u.searchParams.set('btm', tile.btm);
   u.searchParams.set('lft', tile.lft);
   u.searchParams.set('top', tile.top);
   u.searchParams.set('rgt', tile.rgt);
-  const r = await fetch(u, { headers: H });
+
+  const r = await fetch(u, { headers: headers(lat,lon,z), redirect:'follow' });
   if(!r.ok) throw new Error(`articleList ${r.status}`);
-  return await r.text(); // JSON 또는 HTML 문자열
+  return await r.text(); // JSON 또는 HTML
 }
 
-// ── Playwright 재시도(최후의 안전망) ──────────────────────────────────────
+// ── Playwright 폴백 ─────────────────────────────────────────────────
 async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLimit=3){
   const browser = await chromium.launch({ headless: true, args: ['--lang=ko-KR'] });
   const ctx = await browser.newContext({ locale: 'ko-KR' });
@@ -150,21 +147,22 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
   let saved = 0;
 
   for (const tile of tiles) {
-    // ★ 인자를 객체 1개로 전달
-    const groups = await page.evaluate(async (args) => {
+    // clusterList에서 mapKey도 같이 가져오기
+    const { groups, mapKey } = await page.evaluate(async (args) => {
       const { tile, rlet, trad, z, lat, lon } = args;
       const params = new URLSearchParams({
-        view: 'atcl',
-        cortarNo: '',
-        rletTpCd: rlet,
-        tradTpCd: trad,
+        view: 'atcl', cortarNo: '', rletTpCd: rlet, tradTpCd: trad,
         z: String(z), lat: String(lat), lon: String(lon),
         btm: tile.btm, lft: tile.lft, top: tile.top, rgt: tile.rgt
       });
-      const r = await fetch('https://m.land.naver.com/cluster/clusterList?' + params.toString(), { credentials: 'include' });
-      if (!r.ok) return [];
-      const j = await r.json().catch(() => null);
-      return j && j.data && j.data.ARTICLE ? j.data.ARTICLE : [];
+      const r = await fetch('https://m.land.naver.com/cluster/clusterList?' + params.toString(), { credentials:'include' });
+      if (!r.ok) return { groups: [], mapKey: '' };
+      const j = await r.json().catch(()=>null);
+      const data = j?.data || j;
+      return {
+        groups: (data && data.ARTICLE) ? data.ARTICLE : [],
+        mapKey: (data && (data.mapKey || data.MAP_KEY)) ? (data.mapKey || data.MAP_KEY) : ''
+      };
     }, { tile, rlet, trad, z, lat, lon });
 
     for (const g of groups) {
@@ -172,37 +170,33 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
       const pages = Math.min(Math.ceil(count / 20), MAX_PAGES);
 
       for (let pageIndex = 1; pageIndex <= pages; pageIndex++) {
-        // ★ 인자를 객체 1개로 전달 + pageIndex 반영 (기존 1 고정 버그 수정)
         const raw = await page.evaluate(async (args) => {
-          const { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex } = args;
+          const { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex, mapKey } = args;
           const q = new URLSearchParams({
-            itemId: lgeo, mapKey: '', lgeo, showR0: '',
+            itemId: lgeo, mapKey: mapKey || '', lgeo, showR0: '',
             rletTpCd: rlet, tradTpCd: trad,
             z: String(z), lat: String(lat), lon: String(lon),
             totCnt: String(count), cortarNo: '', page: String(pageIndex),
             btm: tile.btm, lft: tile.lft, top: tile.top, rgt: tile.rgt
           });
-          const r = await fetch('https://m.land.naver.com/cluster/ajax/articleList?' + q.toString(), { credentials: 'include' });
+          const r = await fetch('https://m.land.naver.com/cluster/ajax/articleList?' + q.toString(), { credentials:'include' });
           return await r.text();
-        }, { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex });
+        }, { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex, mapKey });
 
-        // 샘플 저장 (처음 몇 페이지만)
         if (saved < sampleLimit) {
           fs.mkdirSync('samples', { recursive: true });
           fs.writeFileSync(path.join('samples', `articleList_browser_${lgeo}_${pageIndex}.txt`), raw, 'utf8');
           saved++;
         }
 
-        // 파싱
         let parsed;
         try { parsed = parseArticleList(JSON.parse(raw)); }
         catch { parsed = parseArticleList(raw); }
-
         for (const it of parsed) {
           const id = String(it.atclNo || it.articleNo || '');
           if (id) out.push({ id });
         }
-        await page.waitForTimeout(200);
+        await page.waitForTimeout(150);
       }
     }
   }
@@ -211,28 +205,28 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
   return out;
 }
 
-// ── 메인 ──────────────────────────────────────────────────────────────────
+// ── 메인 ────────────────────────────────────────────────────────────
 async function main(){
   const startedAt = new Date().toISOString();
-  const debug = { startedAt, mode:'mobile-cluster+grid+browser-fallback', params:{DIST,TYPES,TRADE,MAX_PAGES,GRID}, tiles:0, groups:0, combos:[], pushed:0, notes:[] };
+  const debug = { startedAt, mode:'mobile-cluster+grid+browser-fallback+mapKey', params:{DIST,TYPES,TRADE,MAX_PAGES,GRID}, tiles:0, groups:0, combos:[], pushed:0, notes:[] };
 
   const seen = new Set(fs.existsSync('seen_ids.json') ? JSON.parse(fs.readFileSync('seen_ids.json','utf8')).map(String) : []);
   const rows = [];
   const byId = new Map();
 
   for(const code of DIST){
-    const keyword = '마포구'; // 안전하게 구명 고정
+    const keyword = '마포구';
     const f = await getFilterByKeyword(keyword);
     const tiles = splitGrid(f, GRID);
     debug.tiles += tiles.length;
 
     for(const rlet of TYPES){
       for(const trad of TRADE){
-        // 1) 각 타일마다 그룹 → 리스트
         for(const tile of tiles){
-          let groups = [];
+          let groups=[], mapKey='';
           try {
-            groups = await fetchClusterList(tile, rlet, trad, f.z, f.lat, f.lon);
+            const r = await fetchClusterList(tile, rlet, trad, f.z, f.lat, f.lon);
+            groups = r.groups; mapKey = r.mapKey || mapKey;
           } catch(e) {
             debug.notes.push('clusterList-fail:'+e.message);
             continue;
@@ -245,53 +239,44 @@ async function main(){
             for(let idx=1; idx<=pages; idx++){
               let raw = '';
               try {
-                raw = await fetchArticleListRaw(lgeo, f.z, f.lat, f.lon, count, tile, rlet, trad, idx);
+                raw = await fetchArticleListRaw(lgeo, mapKey, f.z, f.lat, f.lon, count, tile, rlet, trad, idx);
               } catch(e) {
                 debug.notes.push('articleList-fail:'+e.message);
                 continue;
               }
 
-              // 샘플 저장(처음 몇 페이지만)
               if (debug.pushed < 5) {
                 fs.mkdirSync('samples', {recursive:true});
                 fs.writeFileSync(path.join('samples', `articleList_${lgeo}_${idx}.txt`), raw, 'utf8');
               }
 
               let parsed;
-              try {
-                const maybeJson = JSON.parse(raw);
-                parsed = parseArticleList(maybeJson);
-              } catch {
-                parsed = parseArticleList(raw);
-              }
+              try { parsed = parseArticleList(JSON.parse(raw)); }
+              catch { parsed = parseArticleList(raw); }
               debug.combos.push({ code, rlet, trad, lgeo, page: idx, parsed: Array.isArray(parsed)? parsed.length : 0 });
 
               let added = 0;
               for(const it of (Array.isArray(parsed) ? parsed : [])){
                 const id = String(it.atclNo || it.articleNo || '');
                 if(!id || byId.has(id)) continue;
-                byId.set(id, it);
-                added++;
+                byId.set(id, it); added++;
               }
               debug.pushed += added;
-              await sleep(200);
+              await sleep(150);
             }
           }
-        }
 
-        // 2) 안전망: 아직 0이면 브라우저 컨텍스트로 재시도
-        if (byId.size === 0) {
-          const browserHits = await retryInBrowser(keyword, tiles, rlet, trad, f.z, f.lat, f.lon);
-          for(const {id} of browserHits){
-            if(!byId.has(id)) byId.set(id, { atclNo: id });
+          // 안전망: 여전히 0이면 브라우저 컨텍스트 재시도
+          if (byId.size === 0) {
+            const browserHits = await retryInBrowser(keyword, [tile], rlet, trad, f.z, f.lat, f.lon);
+            for(const {id} of browserHits){ if(!byId.has(id)) byId.set(id, { atclNo: id }); }
+            debug.notes.push(`browser-fallback-used:${byId.size}`);
           }
-          debug.notes.push(`browser-fallback-used:${browserHits.length}`);
         }
       }
     }
   }
 
-  // 행 구성
   const d = todayStr();
   for(const [id, it] of byId.entries()){
     rows.push({
@@ -311,9 +296,8 @@ async function main(){
     });
   }
 
-  // 저장
   fs.writeFileSync('current.csv', toCSV(rows), 'utf8');
-  fs.writeFileSync(`snapshot_${todayStr()}.csv`, toCSV(rows), 'utf8');
+  fs.writeFileSync(`snapshot_${d}.csv`, toCSV(rows), 'utf8');
   const newOnes = rows.filter(r => !seen.has(String(r.articleNo)));
   fs.writeFileSync('new_today.csv', toCSV(newOnes), 'utf8');
   const newSeen = new Set([...seen, ...rows.map(r=>String(r.articleNo))]);
