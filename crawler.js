@@ -8,7 +8,7 @@ const DIST = (process.env.DIST_CODES || '1144000000').split(',').map(s=>s.trim()
 const TYPES = (process.env.TYPES || 'OR').split(',').map(s=>s.trim()).filter(Boolean);            // 원룸
 const TRADE = (process.env.TRADE || 'B2').split(',').map(s=>s.trim()).filter(Boolean);            // 월세
 const MAX_PAGES = parseInt(process.env.MAX_PAGES || '40', 10);
-const GRID = parseInt(process.env.GRID || '3', 10); // 지도 타일 분해
+const GRID = parseInt(process.env.GRID || '3', 10); // 지도 타일 분해(크면 더 잘 긁힘, 3~4 추천)
 
 const MOBILE_UA = 'Mozilla/5.0 (Linux; Android 12; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36';
 
@@ -160,7 +160,7 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
   let saved = 0;
 
   for (const tile of tiles) {
-    // clusterList에서 mapKey도 같이 가져오기
+    // clusterList에서 mapKey도 같이 가져오기 (★ 인자 1개 객체로 전달)
     const { groups, mapKey } = await page.evaluate(async (args) => {
       const { tile, rlet, trad, z, lat, lon } = args;
       const params = new URLSearchParams({
@@ -183,6 +183,7 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
       const pages = Math.min(Math.ceil(count / 20), MAX_PAGES);
 
       for (let pageIndex = 1; pageIndex <= pages; pageIndex++) {
+        // ★ 인자 1개 객체 + pageIndex 반영
         const raw = await page.evaluate(async (args) => {
           const { lgeo, z, lat, lon, count, tile, rlet, trad, pageIndex, mapKey } = args;
           const q = new URLSearchParams({
@@ -279,7 +280,7 @@ async function main(){
             }
           }
 
-          // 안전망: 여전히 0이면 브라우저 컨텍스트 재시도
+          // 안전망: 여전히 0이면 브라우저 컨텍스트로 재시도
           if (byId.size === 0) {
             const browserHits = await retryInBrowser(keyword, [tile], rlet, trad, f.z, f.lat, f.lon);
             for(const {id} of browserHits){ if(!byId.has(id)) byId.set(id, { atclNo: id }); }
