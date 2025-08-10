@@ -1,4 +1,4 @@
-// m.land 클러스터 → mapKey 연동 → 실패 시 Playwright 폴백 → CSV/스냅샷 저장
+// m.land 클러스터 + mapKey + 리다이렉트 follow + 모바일 UA → 실패 시 Playwright 폴백 → 스냅샷 저장
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -10,9 +10,11 @@ const TRADE = (process.env.TRADE || 'B2').split(',').map(s=>s.trim()).filter(Boo
 const MAX_PAGES = parseInt(process.env.MAX_PAGES || '40', 10);
 const GRID = parseInt(process.env.GRID || '3', 10); // 지도 타일 분해
 
+const MOBILE_UA = 'Mozilla/5.0 (Linux; Android 12; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36';
+
 function headers(lat, lon, z) {
   return {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
+    'User-Agent': MOBILE_UA,
     'Accept-Language': 'ko-KR,ko;q=0.9',
     'Accept': 'application/json, text/plain, */*',
     'Referer': `https://m.land.naver.com/map/${lat},${lon},${z}/`,
@@ -56,16 +58,18 @@ function pick(...vals){ for(const v of vals){ if(v!==undefined && v!==null && v!
 
 // ── 모바일 지도 파라미터 ────────────────────────────────────────────
 async function getFilterByKeyword(keyword){
-  const r = await fetch(`https://m.land.naver.com/search/result/${encodeURIComponent(keyword)}`, { redirect:'follow', headers: headers(37.5665,126.9780,12) });
+  const r = await fetch(`https://m.land.naver.com/search/result/${encodeURIComponent(keyword)}`, {
+    headers: headers(37.5665,126.9780,12),
+    redirect: 'follow'
+  });
   const html = await r.text();
   const m = html.match(/filter:\s*\{([\s\S]*?)\}/);
   if(!m) throw new Error('filter block not found');
   const raw = m[1].replace(/[\s'"]/g,'');
   const grab = (k) => { const mm = raw.match(new RegExp(`${k}:([^,}]+)`)); return mm ? mm[1] : ''; };
-  const lat = parseFloat(grab('lat')), lon = parseFloat(grab('lon')), z = grab('z') || '12', cortarNo = grab('cortarNo');
+  const lat = parseFloat(grab('lat')), lon = parseFloat(grab('lon')), z = grab('z') || '12';
   const lat_margin = 0.118, lon_margin = 0.111;
   return { lat, lon, z,
-    cortarNo,
     btm: (lat-lat_margin).toFixed(6),
     lft: (lon-lon_margin).toFixed(6),
     top: (lat+lat_margin).toFixed(6),
@@ -131,16 +135,25 @@ async function fetchArticleListRaw(lgeo, mapKey, z, lat, lon, count, tile, rletT
   u.searchParams.set('top', tile.top);
   u.searchParams.set('rgt', tile.rgt);
 
+  // ★ 307 리다이렉트 따라가도록 설정
   const r = await fetch(u, { headers: headers(lat,lon,z), redirect:'follow' });
-  if(!r.ok) throw new Error(`articleList ${r.status}`);
-  return await r.text(); // JSON 또는 HTML
+  const txt = await r.text();
+  return txt; // JSON 또는 HTML
 }
 
-// ── Playwright 폴백 ─────────────────────────────────────────────────
+// ── Playwright 폴백(모바일 컨텍스트) ─────────────────────────────────
 async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLimit=3){
   const browser = await chromium.launch({ headless: true, args: ['--lang=ko-KR'] });
-  const ctx = await browser.newContext({ locale: 'ko-KR' });
+  const ctx = await browser.newContext({
+    locale: 'ko-KR',
+    userAgent: MOBILE_UA,
+    viewport: { width: 390, height: 720 },
+    deviceScaleFactor: 2,
+    isMobile: true,
+    hasTouch: true
+  });
   const page = await ctx.newPage();
+  await page.setExtraHTTPHeaders({ 'Accept-Language': 'ko-KR,ko;q=0.9' });
   await page.goto(`https://m.land.naver.com/search/result/${encodeURIComponent(keyword)}`, { waitUntil: 'domcontentloaded' });
 
   const out = [];
@@ -208,7 +221,7 @@ async function retryInBrowser(keyword, tiles, rlet, trad, z, lat, lon, sampleLim
 // ── 메인 ────────────────────────────────────────────────────────────
 async function main(){
   const startedAt = new Date().toISOString();
-  const debug = { startedAt, mode:'mobile-cluster+grid+browser-fallback+mapKey', params:{DIST,TYPES,TRADE,MAX_PAGES,GRID}, tiles:0, groups:0, combos:[], pushed:0, notes:[] };
+  const debug = { startedAt, mode:'mobile-cluster+grid+browser-fallback+mapKey+redir', params:{DIST,TYPES,TRADE,MAX_PAGES,GRID}, tiles:0, groups:0, combos:[], pushed:0, notes:[] };
 
   const seen = new Set(fs.existsSync('seen_ids.json') ? JSON.parse(fs.readFileSync('seen_ids.json','utf8')).map(String) : []);
   const rows = [];
