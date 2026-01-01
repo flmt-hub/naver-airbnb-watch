@@ -1,5 +1,5 @@
 {
-  "startedAt": "2025-12-31T01:58:21.023Z",
+  "startedAt": "2026-01-01T02:09:05.818Z",
   "mode": "mobile-cluster+grid+mapKey+redir+anyparser+detail+kst+bom",
   "params": {
     "DIST": [
@@ -16,7 +16,7 @@
     "DETAIL_BROWSER_LIMIT": 12
   },
   "tiles": 9,
-  "groups": 185,
+  "groups": 184,
   "combos": [
     {
       "code": "1144000000",
@@ -96,175 +96,167 @@
       "trad": "B2",
       "lgeo": "212201103",
       "page": 10,
-      "parsed": 8
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201112",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201112",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201112",
-      "page": 3,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201112",
-      "page": 4,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201112",
-      "page": 5,
-      "parsed": 12
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201110",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201110",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201110",
-      "page": 3,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201110",
-      "page": 4,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201110",
-      "page": 5,
-      "parsed": 4
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 3,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 4,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023323",
-      "page": 5,
-      "parsed": 3
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023233",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023233",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023233",
-      "page": 3,
-      "parsed": 7
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023332",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023332",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023332",
-      "page": 3,
       "parsed": 2
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201112",
+      "page": 1,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201112",
+      "page": 2,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201112",
+      "page": 3,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201112",
+      "page": 4,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201112",
+      "page": 5,
+      "parsed": 9
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201110",
+      "page": 1,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201110",
+      "page": 2,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201110",
+      "page": 3,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201110",
+      "page": 4,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201110",
+      "page": 5,
+      "parsed": 5
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 1,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 2,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 3,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 4,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023323",
+      "page": 5,
+      "parsed": 2
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023233",
+      "page": 1,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023233",
+      "page": 2,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023233",
+      "page": 3,
+      "parsed": 1
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023332",
+      "page": 1,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023332",
+      "page": 2,
+      "parsed": 16
     },
     {
       "code": "1144000000",
@@ -296,7 +288,7 @@
       "trad": "B2",
       "lgeo": "212023312",
       "page": 2,
-      "parsed": 8
+      "parsed": 7
     },
     {
       "code": "1144000000",
@@ -304,7 +296,7 @@
       "trad": "B2",
       "lgeo": "212023232",
       "page": 1,
-      "parsed": 20
+      "parsed": 19
     },
     {
       "code": "1144000000",
@@ -312,21 +304,21 @@
       "trad": "B2",
       "lgeo": "212023321",
       "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023230",
-      "page": 1,
-      "parsed": 9
+      "parsed": 19
     },
     {
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212023210",
+      "page": 1,
+      "parsed": 8
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023230",
       "page": 1,
       "parsed": 8
     },
@@ -350,7 +342,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023231",
+      "lgeo": "212201102",
       "page": 1,
       "parsed": 7
     },
@@ -358,7 +350,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212201102",
+      "lgeo": "212023231",
       "page": 1,
       "parsed": 6
     },
@@ -376,7 +368,7 @@
       "trad": "B2",
       "lgeo": "212201013",
       "page": 1,
-      "parsed": 1
+      "parsed": 2
     },
     {
       "code": "1144000000",
@@ -752,7 +744,7 @@
       "trad": "B2",
       "lgeo": "212032220",
       "page": 7,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -1662,326 +1654,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212032230",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 4,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 6,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 7,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 8,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 9,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 10,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 11,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 12,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 13,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 14,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 15,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 16,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 17,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 18,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 19,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 20,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 21,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 22,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 23,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 24,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 25,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 26,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 27,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 28,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 29,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 30,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 31,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 32,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 33,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 34,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 35,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 36,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 37,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 38,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 39,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032230",
-      "page": 40,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212032233",
       "page": 1,
       "parsed": 0
@@ -2302,6 +1974,326 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212032230",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 12,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 13,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 14,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 15,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 16,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 17,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 18,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 19,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 20,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 21,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 22,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 23,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 24,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 25,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 26,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 27,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 28,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 29,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 30,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 31,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 32,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 33,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 34,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 35,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 36,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 37,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 38,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 39,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212032230",
+      "page": 40,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212032223",
       "page": 1,
       "parsed": 0
@@ -2534,22 +2526,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212032223",
-      "page": 30,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212032223",
-      "page": 31,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212023331",
       "page": 1,
       "parsed": 0
@@ -3742,15 +3718,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210003",
-      "page": 11,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 1,
       "parsed": 0
     },
@@ -3758,7 +3726,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 2,
       "parsed": 0
     },
@@ -3766,7 +3734,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 3,
       "parsed": 0
     },
@@ -3774,7 +3742,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 4,
       "parsed": 0
     },
@@ -3782,7 +3750,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 5,
       "parsed": 0
     },
@@ -3790,7 +3758,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 6,
       "parsed": 0
     },
@@ -3798,7 +3766,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 7,
       "parsed": 0
     },
@@ -3806,7 +3774,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212023333",
+      "lgeo": "212210000",
       "page": 8,
       "parsed": 0
     },
@@ -3814,7 +3782,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 1,
       "parsed": 0
     },
@@ -3822,7 +3790,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 2,
       "parsed": 0
     },
@@ -3830,7 +3798,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 3,
       "parsed": 0
     },
@@ -3838,7 +3806,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 4,
       "parsed": 0
     },
@@ -3846,7 +3814,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 5,
       "parsed": 0
     },
@@ -3854,7 +3822,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 6,
       "parsed": 0
     },
@@ -3862,7 +3830,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 7,
       "parsed": 0
     },
@@ -3870,7 +3838,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210000",
+      "lgeo": "212023333",
       "page": 8,
       "parsed": 0
     },
@@ -4063,30 +4031,6 @@
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212023332",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023332",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023312",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212023312",
       "page": 2,
       "parsed": 0
     },
@@ -4103,6 +4047,22 @@
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212023313",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023312",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212023312",
       "page": 2,
       "parsed": 0
     },
@@ -5830,6 +5790,14 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212032322",
+      "page": 11,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212032323",
       "page": 1,
       "parsed": 0
@@ -5960,14 +5928,6 @@
       "trad": "B2",
       "lgeo": "212210111",
       "page": 7,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210111",
-      "page": 8,
       "parsed": 0
     },
     {
@@ -6254,160 +6214,8 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212201211",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 4,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 6,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 7,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 8,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 9,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201211",
-      "page": 10,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 4,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 6,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 7,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 8,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 9,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201121",
-      "page": 10,
+      "lgeo": "212201033",
+      "page": 11,
       "parsed": 0
     },
     {
@@ -6488,6 +6296,150 @@
       "trad": "B2",
       "lgeo": "212201103",
       "page": 10,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201121",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201211",
+      "page": 9,
       "parsed": 0
     },
     {
@@ -6766,6 +6718,14 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212201013",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212201301",
       "page": 1,
       "parsed": 0
@@ -6775,14 +6735,6 @@
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212201213",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201013",
       "page": 1,
       "parsed": 0
     },
@@ -7054,14 +7006,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210032",
-      "page": 33,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212210002",
       "page": 1,
       "parsed": 0
@@ -7374,14 +7318,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210210",
-      "page": 17,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212210033",
       "page": 1,
       "parsed": 0
@@ -7582,14 +7518,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210221",
-      "page": 13,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212210003",
       "page": 1,
       "parsed": 0
@@ -7670,14 +7598,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210003",
-      "page": 11,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212210203",
       "page": 1,
       "parsed": 0
@@ -7742,64 +7662,8 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210023",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 4,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 6,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 7,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210023",
-      "page": 8,
+      "lgeo": "212210203",
+      "page": 9,
       "parsed": 0
     },
     {
@@ -7864,6 +7728,62 @@
       "trad": "B2",
       "lgeo": "212210020",
       "page": 8,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210023",
+      "page": 7,
       "parsed": 0
     },
     {
@@ -8135,30 +8055,6 @@
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212210031",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210201",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210201",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210201",
       "page": 3,
       "parsed": 0
     },
@@ -8198,7 +8094,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210231",
+      "lgeo": "212210201",
       "page": 1,
       "parsed": 0
     },
@@ -8206,7 +8102,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210231",
+      "lgeo": "212210201",
       "page": 2,
       "parsed": 0
     },
@@ -8223,6 +8119,22 @@
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212210230",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210231",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210231",
       "page": 2,
       "parsed": 0
     },
@@ -8462,6 +8374,14 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212210313",
+      "page": 19,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212210033",
       "page": 1,
       "parsed": 0
@@ -8638,62 +8558,6 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210312",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210312",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210312",
-      "page": 3,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210312",
-      "page": 4,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210312",
-      "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210312",
-      "page": 6,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210312",
-      "page": 7,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
       "lgeo": "212210330",
       "page": 1,
       "parsed": 0
@@ -8750,6 +8614,62 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212210312",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210312",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210312",
+      "page": 3,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210312",
+      "page": 4,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210312",
+      "page": 5,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210312",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210312",
+      "page": 7,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212210311",
       "page": 1,
       "parsed": 0
@@ -8832,7 +8752,7 @@
       "trad": "B2",
       "lgeo": "212210122",
       "page": 2,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8840,55 +8760,7 @@
       "trad": "B2",
       "lgeo": "212210122",
       "page": 3,
-      "parsed": 7
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210031",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210031",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210031",
-      "page": 3,
-      "parsed": 4
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210132",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210132",
-      "page": 2,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210132",
-      "page": 3,
-      "parsed": 4
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8896,7 +8768,7 @@
       "trad": "B2",
       "lgeo": "212210133",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8904,7 +8776,7 @@
       "trad": "B2",
       "lgeo": "212210133",
       "page": 2,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8912,7 +8784,31 @@
       "trad": "B2",
       "lgeo": "212210133",
       "page": 3,
-      "parsed": 2
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210031",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210031",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210031",
+      "page": 3,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8920,7 +8816,7 @@
       "trad": "B2",
       "lgeo": "212210213",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8928,23 +8824,23 @@
       "trad": "B2",
       "lgeo": "212210213",
       "page": 2,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210113",
+      "lgeo": "212210132",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212210113",
+      "lgeo": "212210132",
       "page": 2,
-      "parsed": 16
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8952,7 +8848,7 @@
       "trad": "B2",
       "lgeo": "212210211",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8960,23 +8856,7 @@
       "trad": "B2",
       "lgeo": "212210211",
       "page": 2,
-      "parsed": 16
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210231",
-      "page": 1,
-      "parsed": 20
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210231",
-      "page": 2,
-      "parsed": 16
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8984,7 +8864,7 @@
       "trad": "B2",
       "lgeo": "212210300",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -8992,7 +8872,39 @@
       "trad": "B2",
       "lgeo": "212210300",
       "page": 2,
-      "parsed": 15
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210113",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210113",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210231",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210231",
+      "page": 2,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9000,7 +8912,7 @@
       "trad": "B2",
       "lgeo": "212210123",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9008,7 +8920,7 @@
       "trad": "B2",
       "lgeo": "212210123",
       "page": 2,
-      "parsed": 11
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9016,7 +8928,7 @@
       "trad": "B2",
       "lgeo": "212210310",
       "page": 1,
-      "parsed": 18
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9024,7 +8936,7 @@
       "trad": "B2",
       "lgeo": "212210320",
       "page": 1,
-      "parsed": 17
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9032,7 +8944,7 @@
       "trad": "B2",
       "lgeo": "212210102",
       "page": 1,
-      "parsed": 10
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9040,15 +8952,7 @@
       "trad": "B2",
       "lgeo": "212210121",
       "page": 1,
-      "parsed": 10
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210130",
-      "page": 1,
-      "parsed": 7
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9056,15 +8960,7 @@
       "trad": "B2",
       "lgeo": "212210131",
       "page": 1,
-      "parsed": 7
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210301",
-      "page": 1,
-      "parsed": 7
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9072,7 +8968,23 @@
       "trad": "B2",
       "lgeo": "212210302",
       "page": 1,
-      "parsed": 7
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210130",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210301",
+      "page": 1,
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9080,7 +8992,7 @@
       "trad": "B2",
       "lgeo": "212210303",
       "page": 1,
-      "parsed": 1
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9088,7 +9000,7 @@
       "trad": "B2",
       "lgeo": "212203032",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9096,7 +9008,7 @@
       "trad": "B2",
       "lgeo": "212203032",
       "page": 2,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9104,7 +9016,7 @@
       "trad": "B2",
       "lgeo": "212203032",
       "page": 3,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9112,7 +9024,7 @@
       "trad": "B2",
       "lgeo": "212203032",
       "page": 4,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9120,7 +9032,7 @@
       "trad": "B2",
       "lgeo": "212203032",
       "page": 5,
-      "parsed": 18
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9128,7 +9040,7 @@
       "trad": "B2",
       "lgeo": "212203033",
       "page": 1,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9136,7 +9048,7 @@
       "trad": "B2",
       "lgeo": "212203033",
       "page": 2,
-      "parsed": 20
+      "parsed": 0
     },
     {
       "code": "1144000000",
@@ -9144,7 +9056,39 @@
       "trad": "B2",
       "lgeo": "212203033",
       "page": 3,
-      "parsed": 2
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212203100",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212203100",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201330",
+      "page": 1,
+      "parsed": 20
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212201330",
+      "page": 2,
+      "parsed": 3
     },
     {
       "code": "1144000000",
@@ -9160,39 +9104,7 @@
       "trad": "B2",
       "lgeo": "212201323",
       "page": 2,
-      "parsed": 6
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212203100",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212203100",
-      "page": 2,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201330",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212201330",
-      "page": 2,
-      "parsed": 0
+      "parsed": 1
     },
     {
       "code": "1144000000",
@@ -9200,7 +9112,7 @@
       "trad": "B2",
       "lgeo": "212201322",
       "page": 1,
-      "parsed": 0
+      "parsed": 13
     },
     {
       "code": "1144000000",
@@ -9208,15 +9120,7 @@
       "trad": "B2",
       "lgeo": "212201233",
       "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212203101",
-      "page": 1,
-      "parsed": 0
+      "parsed": 11
     },
     {
       "code": "1144000000",
@@ -9224,7 +9128,15 @@
       "trad": "B2",
       "lgeo": "212203120",
       "page": 1,
-      "parsed": 0
+      "parsed": 8
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212203101",
+      "page": 1,
+      "parsed": 7
     },
     {
       "code": "1144000000",
@@ -9232,7 +9144,7 @@
       "trad": "B2",
       "lgeo": "212203030",
       "page": 1,
-      "parsed": 0
+      "parsed": 6
     },
     {
       "code": "1144000000",
@@ -9240,7 +9152,7 @@
       "trad": "B2",
       "lgeo": "212203102",
       "page": 1,
-      "parsed": 0
+      "parsed": 6
     },
     {
       "code": "1144000000",
@@ -9248,7 +9160,7 @@
       "trad": "B2",
       "lgeo": "212203103",
       "page": 1,
-      "parsed": 0
+      "parsed": 4
     },
     {
       "code": "1144000000",
@@ -9256,7 +9168,7 @@
       "trad": "B2",
       "lgeo": "212203012",
       "page": 1,
-      "parsed": 0
+      "parsed": 3
     },
     {
       "code": "1144000000",
@@ -9264,15 +9176,7 @@
       "trad": "B2",
       "lgeo": "212203121",
       "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212203011",
-      "page": 1,
-      "parsed": 0
+      "parsed": 3
     },
     {
       "code": "1144000000",
@@ -9280,7 +9184,7 @@
       "trad": "B2",
       "lgeo": "212201332",
       "page": 1,
-      "parsed": 0
+      "parsed": 1
     },
     {
       "code": "1144000000",
@@ -9288,7 +9192,7 @@
       "trad": "B2",
       "lgeo": "212201320",
       "page": 1,
-      "parsed": 0
+      "parsed": 1
     },
     {
       "code": "1144000000",
@@ -9296,7 +9200,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 1,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9304,7 +9208,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 2,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9312,7 +9216,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 3,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9320,7 +9224,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 4,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9328,7 +9232,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 5,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9336,7 +9240,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 6,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9344,7 +9248,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 7,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9352,7 +9256,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 8,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9360,7 +9264,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 9,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9368,7 +9272,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 10,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9376,7 +9280,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 11,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9384,15 +9288,7 @@
       "trad": "B2",
       "lgeo": "212210221",
       "page": 12,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210221",
-      "page": 13,
-      "parsed": 0
+      "parsed": 19
     },
     {
       "code": "1144000000",
@@ -9400,7 +9296,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 1,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9408,7 +9304,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 2,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9416,7 +9312,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 3,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9424,7 +9320,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 4,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9432,7 +9328,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 5,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9440,7 +9336,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 6,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9448,7 +9344,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 7,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9456,7 +9352,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 8,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9464,7 +9360,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 9,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9472,7 +9368,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 10,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9480,7 +9376,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 11,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9488,7 +9384,7 @@
       "trad": "B2",
       "lgeo": "212210223",
       "page": 12,
-      "parsed": 0
+      "parsed": 3
     },
     {
       "code": "1144000000",
@@ -9496,7 +9392,7 @@
       "trad": "B2",
       "lgeo": "212210232",
       "page": 1,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9504,7 +9400,7 @@
       "trad": "B2",
       "lgeo": "212210232",
       "page": 2,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9512,7 +9408,7 @@
       "trad": "B2",
       "lgeo": "212210232",
       "page": 3,
-      "parsed": 0
+      "parsed": 20
     },
     {
       "code": "1144000000",
@@ -9528,30 +9424,6 @@
       "trad": "B2",
       "lgeo": "212210232",
       "page": 5,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210232",
-      "page": 6,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210231",
-      "page": 1,
-      "parsed": 0
-    },
-    {
-      "code": "1144000000",
-      "rlet": "OR",
-      "trad": "B2",
-      "lgeo": "212210231",
-      "page": 2,
       "parsed": 0
     },
     {
@@ -9567,6 +9439,22 @@
       "rlet": "OR",
       "trad": "B2",
       "lgeo": "212210230",
+      "page": 2,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210231",
+      "page": 1,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
+      "lgeo": "212210231",
       "page": 2,
       "parsed": 0
     },
@@ -9606,7 +9494,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212212012",
+      "lgeo": "212212002",
       "page": 1,
       "parsed": 0
     },
@@ -9614,7 +9502,7 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
-      "lgeo": "212212002",
+      "lgeo": "212212012",
       "page": 1,
       "parsed": 0
     },
@@ -9910,6 +9798,14 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212212111",
+      "page": 9,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212210333",
       "page": 1,
       "parsed": 0
@@ -10070,6 +9966,14 @@
       "code": "1144000000",
       "rlet": "OR",
       "trad": "B2",
+      "lgeo": "212210332",
+      "page": 6,
+      "parsed": 0
+    },
+    {
+      "code": "1144000000",
+      "rlet": "OR",
+      "trad": "B2",
       "lgeo": "212210231",
       "page": 1,
       "parsed": 0
@@ -10107,12 +10011,12 @@
       "parsed": 0
     }
   ],
-  "pushed": 2227,
+  "pushed": 2231,
   "notes": [],
   "details": {
-    "tried": 2227,
-    "htmlOk": 297,
+    "tried": 2231,
+    "htmlOk": 234,
     "browserOk": 12
   },
-  "scannedIds": 2227
+  "scannedIds": 2231
 }
